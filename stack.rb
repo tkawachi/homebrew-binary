@@ -7,4 +7,8 @@ class Stack < Formula
   def install
     bin.install "stack-0.1.2.0-x86_64-osx" => "stack"
   end
+
+  test do
+    system "#{bin}/stack", "--version"
+  end
 end
